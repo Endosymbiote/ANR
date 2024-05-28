@@ -1,0 +1,151 @@
+import re
+import pandas as pd
+from collections import defaultdict, Counter
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Function to parse the decklists
+
+def parse_decklists(file_content):
+    decklists = {}
+    current_deck = None
+    lines = file_content.strip().split("\n")
+    for line in lines:
+        if line.startswith(">"):
+            current_deck = line[1:].strip()
+            decklists[current_deck] = {}
+        else:
+            card_count, card_name = re.split(r'\s+', line.strip(), maxsplit=1)
+            card_count = int(card_count)
+            card_name = card_name.lower()  # Case insensitivity
+            if card_name in decklists[current_deck]:
+                decklists[current_deck][card_name] += card_count
+            else:
+                decklists[current_deck][card_name] = card_count
+    return decklists
+
+# Function to analyze invariance
+
+def analyze_invariance(decklists):
+    all_cards = defaultdict(list)
+    for deck in decklists.values():
+        for card, count in deck.items():
+            all_cards[card].append(count)
+    total_decks = len(decklists)
+    invariant_cards = {}
+    flex_cards = {}
+    for card, counts in all_cards.items():
+        if len(counts) == total_decks:
+            # Count the frequency of each count
+            count_freq = Counter(counts)
+            # Calculate the percentage of each count
+            percent_freq = {f"{count} ({amount} - {amount/total_decks*100:.1f}%)" for count, amount in count_freq.items()}
+            invariant_cards[card] = ', '.join(percent_freq)
+        else:
+            flex_cards[card] = counts
+    return invariant_cards, flex_cards
+
+# Function to analyze correlations
+
+def analyze_correlation(decklists):
+    df = pd.DataFrame.from_dict(decklists, orient='index').fillna(0)
+    correlations = df.corr().stack().reset_index()
+    correlations.columns = ['card1', 'card2', 'correlation']
+    correlated_pairs = correlations[(correlations['correlation'] > 0.8) & (correlations['correlation'] < 1)]
+    return correlated_pairs[['card1', 'card2', 'correlation']].values
+
+# Scaling positions
+
+def scale_positions(pos, scale_factor=2):
+    for key in pos.keys():
+        pos[key] = pos[key] * scale_factor
+    return pos
+
+
+
+# Function to plot correlation graph
+def plot_correlation_graph(correlated_pairs):
+    G = nx.Graph()
+    for card1, card2, correlation in correlated_pairs:
+        G.add_edge(card1, card2, weight=correlation)
+        pos = nx.spring_layout(G, k=1.3, seed=42) 
+    plt.figure(figsize=(20, 15))
+
+    # Draw nodes with custom options
+
+    nx.draw_networkx_nodes(G, pos,
+                           node_size=3000,
+                           node_color="skyblue",
+                           alpha=0.9,
+                           edgecolors="black",
+                           linewidths=1.5)
+    edges = G.edges(data=True)
+    widths = [d['weight'] ** 2 *5 for (u, v, d) in edges]
+  
+
+    # Draw edges with custom options
+
+    nx.draw_networkx_edges(G, pos,
+                           width=widths,
+                           alpha=0.5,
+                           edge_color="gray",
+                           style="solid")
+
+    # Draw labels with custom options
+
+    nx.draw_networkx_labels(G, pos,
+                            font_size=10,
+                            font_color="black",
+                            font_weight="bold",
+                            bbox=dict(facecolor="white", edgecolor="black", boxstyle="round,pad=0.3"),
+                            verticalalignment="center")
+   
+    # Set plot title and axis
+
+    plt.title("Card Correlation Graph", fontsize=20, fontweight="bold")
+    plt.axis("off")
+
+    # Display the graph
+
+    plt.show()
+
+
+
+# Function to run the whole analysis
+
+def decklist_conservation_analyzer(file_content):
+    decklists = parse_decklists(file_content)
+    invariant_cards, flex_cards = analyze_invariance(decklists)
+    print("Invariant Cards:")
+    for card, details in invariant_cards.items():
+        print(f"{card}: {details}")
+    print("\nFlex Cards:")
+    for card, counts in flex_cards.items():
+        counts_summary = Counter(counts)
+        counts_details = ', '.join([f"{amt} ({freq} - {freq / len(decklists) * 100:.1f}%)" for amt, freq in counts_summary.items()])
+        print(f"{card}: {counts_details}")
+
+    
+    if len(decklists) > 5:  # Adjusted threshold
+        correlated_pairs = analyze_correlation(decklists)
+        print("\nCorrelated Pairs:")
+        for card1, card2, correlation in correlated_pairs:
+            print(f"{card1} <-> {card2} (correlation: {correlation:.2f})")
+      
+        plot_correlation_graph(correlated_pairs)
+    else:
+        print("\nCorrelation analysis skipped due to insufficient decklist count.")
+
+# Main function to load file content and execute the analyzer
+
+def main(file_path):
+    with open(file_path, 'r') as file:
+        file_content = file.read()
+    decklist_conservation_analyzer(file_content)
+
+
+# Example usage
+
+if __name__ == "__main__":
+    # Replace 'test.txt' with the path to your file
+    main('C:/test.txt')
