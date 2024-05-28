@@ -1,0 +1,267 @@
+>ari1
+1 Burner
+3 Creative Commission
+1 Diesel
+3 Dirty Laundry
+3 Mining Accident
+1 Sure Gamble
+2 Trick Shot
+3 LilyPAD
+1 Simulchip
+1 Daily Casts
+1 Dr. Nuka Vrolyck
+3 Environmental Testing
+1 Hannah "Wheels" Pilintra
+1 Stoneship Chart Room
+3 Urban Art Vernissage
+1 Cleaver
+2 Ika
+1 Slap Vandal
+1 Unity
+1 Coalescence
+2 Hush
+3 Kyuban
+2 Muse
+1 Physarum Entangler
+2 Self-modifying Code
+1 Takobi
+>ari2
+2 Burner
+3 Creative Commission
+3 Dirty Laundry
+3 Overclock
+1 Pinhole Threading
+3 Sure Gamble
+2 Trick Shot
+2 Cataloguer
+2 Cyberdelia
+2 DZMZ Optimizer
+1 LilyPAD
+3 Simulchip
+3 Daily Casts
+3 Dr. Nuka Vrolyck
+2 Earthrise Hotel
+1 Miss Bones
+2 Stoneship Chart Room
+2 Telework Contract
+1 Buzzsaw
+1 Cleaver
+1 Echelon
+1 Clot
+3 Coalescence
+1 Hush
+1 K2CP Turbine
+3 Muse
+1 Paricia
+1 Physarum Entangler
+1 Pichação
+3 Self-modifying Code
+1 Stargate
+1 World Tree
+>ari3
+1 Ashen Epilogue
+1 Deep Dive
+3 Diesel
+1 Pinhole Threading
+3 Spec Work
+3 Trick Shot
+2 Gachapon
+3 LilyPAD
+3 Simulchip
+1 Aesop’s Pawnshop
+3 Environmental Testing
+3 Urban Art Vernissage
+1 Cleaver
+1 Echelon
+1 Ika
+1 Unity
+3 Coalescence
+1 Conduit
+1 Cupellation
+1 Hush
+1 K2CP Turbine
+2 Kyuban
+2 Muse
+1 Physarum Entangler
+1 Pichação
+2 Self-modifying Code
+>ari4
+3 Creative Commission
+2 Diesel
+1 Pinhole Threading
+2 Trick Shot
+2 DZMZ Optimizer
+3 LilyPAD
+3 Simulchip
+3 Daily Casts
+3 Environmental Testing
+2 Miss Bones
+3 Urban Art Vernissage
+1 Cleaver
+1 Ika
+1 Umbrella
+1 Coalescence
+1 Conduit
+1 Cupellation
+2 Egret
+2 Hush
+1 K2CP Turbine
+2 Kyuban
+2 Muse
+1 Physarum Entangler
+1 Pichação
+2 Self-modifying Code
+>ari5
+3 Creative Commission
+1 Deep Dive
+3 Diesel
+3 Sure Gamble
+3 Trick Shot
+2 Gachapon
+3 LilyPAD
+3 Simulchip
+3 Environmental Testing
+1 Miss Bones
+2 No Free Lunch
+3 Urban Art Vernissage
+1 Buzzsaw
+1 Cleaver
+1 Echelon
+1 Ika
+1 Conduit
+1 Hush
+1 K2CP Turbine
+3 Kyuban
+1 Physarum Entangler
+1 Pichação
+3 Self-modifying Code
+>ari6
+1 Deep Dive
+3 Diesel
+1 Harmony AR Therapy
+2 Privileged Access
+3 Spec Work
+1 DZMZ Optimizer
+3 LilyPAD
+3 Simulchip
+2 Daily Casts
+3 Environmental Testing
+3 No Free Lunch
+1 The Twinning
+3 Urban Art Vernissage
+1 Cleaver
+1 Echelon
+1 Ika
+1 Unity
+1 Clot
+3 Coalescence
+1 Flux Capacitor
+1 Hush
+1 K2CP Turbine
+3 Kyuban
+2 Muse
+1 Paricia
+1 Self-modifying Code
+>ari7
+2 Overclock
+1 Spree
+3 Test Run
+2 Trick Shot
+1 Cataloguer
+2 DZMZ Optimizer
+3 LilyPAD
+1 Poison Vial
+3 Simulchip
+1 Aesop’s Pawnshop
+3 Dr. Nuka Vrolyck
+2 Environmental Testing
+1 Scrubber
+2 Stoneship Chart Room
+3 Telework Contract
+1 Urban Art Vernissage
+3 Slap Vandal
+2 Botulus
+3 Coalescence
+1 Cupellation
+1 Flux Capacitor
+1 Hush
+1 Kyuban
+3 Muse
+1 Physarum Entangler
+1 Pichação
+>ari8
+1 Ashen Epilogue
+2 Creative Commission
+1 Deep Dive
+3 Diesel
+3 Spec Work
+1 DZMZ Optimizer
+3 Gachapon
+3 LilyPAD
+3 Simulchip
+1 Aesop’s Pawnshop
+3 Environmental Testing
+3 Urban Art Vernissage
+1 Ika
+1 Propeller
+1 Unity
+1 Clot
+3 Coalescence
+1 Conduit
+2 Hush
+1 K2CP Turbine
+2 Kyuban
+3 Muse
+1 Paricia
+1 Physarum Entangler
+1 Pichação
+>ari9
+2 Burner
+3 Creative Commission
+3 Diesel
+2 Privileged Access
+2 Cataloguer
+1 DZMZ Optimizer
+1 Flip Switch
+3 LilyPAD
+3 Simulchip
+3 Daily Casts
+1 DJ Fenris
+2 Dr. Nuka Vrolyck
+3 Environmental Testing
+3 Urban Art Vernissage
+1 Buzzsaw
+1 Cleaver
+1 Echelon
+1 Ika
+1 Clot
+1 Hush
+1 K2CP Turbine
+3 Kyuban
+1 Physarum Entangler
+2 Self-modifying Code
+>ari10
+2 Burner
+3 Creative Commission
+3 Diesel
+2 Privileged Access
+2 Cataloguer
+1 DZMZ Optimizer
+1 Flip Switch
+3 LilyPAD
+3 Simulchip
+3 Daily Casts
+1 DJ Fenris
+2 Dr. Nuka Vrolyck
+3 Environmental Testing
+3 Urban Art Vernissage
+1 Buzzsaw
+1 Cleaver
+1 Echelon
+1 Ika
+1 Clot
+1 Hush
+1 K2CP Turbine
+3 Kyuban
+1 Physarum Entangler
+2 Self-modifying Code
